@@ -26,7 +26,7 @@ WHILE (@i < 6)
 
 BEGIN
 
-	SET @SQLL = 'SET @L' + CAST(@i AS VARCHAR) + ' = @L' + CAST(@i AS VARCHAR) + ' OpsMgmtAppsTestDL.dbo.fn_EquinoxSolstice_EclipticLongitude(@JD,@i)'
+	SET @SQLL = 'SET @L' + CAST(@i AS VARCHAR) + ' = @L' + CAST(@i AS VARCHAR) + ' dbo.fn_EquinoxSolstice_EclipticLongitude(@JD,@i)'
 	
 	EXEC(@SQLL)
 	
@@ -48,7 +48,7 @@ WHILE (@j < 5)
 
 BEGIN
 
-	SET @SQLB = 'SET @B' + CAST(@j AS VARCHAR) + ' = @B' + CAST(@j AS VARCHAR) + ' OpsMgmtAppsTestDL.dbo.fn_EquinoxSolstice_EclipticLatitude(@JD,@j)'
+	SET @SQLB = 'SET @B' + CAST(@j AS VARCHAR) + ' = @B' + CAST(@j AS VARCHAR) + ' dbo.fn_EquinoxSolstice_EclipticLatitude(@JD,@j)'
 	
 	EXEC(@SQLB)
 	
